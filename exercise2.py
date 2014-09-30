@@ -40,13 +40,25 @@ def checksum (upc):
     # convert string to array
     # hint: use the list function
     upc_list = list(upc)
-    print(upc_list)
+    # print(upc_list)
 
-    # generate checksum using the first 11 digits provided
-    # check against the the twelfth digit
+    odd_sum = 0
+    for value in upc_list[0:11:2]:
+        odd_sum += int(value)
 
-    # return True if they are equal, False otherwise
+    even_sum = 0
+    for value in upc_list[1:11:2]:
+        even_sum += int(value)
 
-    return False
+    check_sum = (even_sum + (odd_sum * 3)) % 10
 
-checksum('03600029145x')
+    if check_sum != 0:
+        check_sum = 10 - check_sum
+
+    if check_sum == int(upc_list[11]):
+        return True
+    else:
+        return False
+
+
+print(checksum('036000291452'))
