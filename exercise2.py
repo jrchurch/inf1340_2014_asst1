@@ -13,10 +13,8 @@ __license__ = "MIT License"
 
 __status__ = "Prototype"
 
-# imports one per line
 
-
-def checksum (upc):
+def checksum(upc):
     """
     Checks if the digits in a UPC is consistent with checksum
 
@@ -29,29 +27,33 @@ def checksum (upc):
         ValueError if string is the wrong length (with error string stating how many digits are over or under
     """
     # check type of input
-    # raise TypeError if not string
     if type(upc) is str:
         # check length of string
-        # raise ValueError if not 12
         if len(upc) != 12:
+            # raise ValueError if not 12
             raise ValueError("UPC must be 12 characters")
     else:
+        # raise TypeError if not string
         raise TypeError("Invalid type passed as parameter")
-    # convert string to array
-    # hint: use the list function
+
+    # convert string to array the list function
     upc_list = list(upc)
-    # print(upc_list)
 
+    # begin calculation for UPC checksum
+    # initialize variable for the sum of odd numbers
     odd_sum = 0
-    for value in upc_list[0:11:2]:
-        odd_sum += int(value)
+    for digit in upc_list[0::2]:  # loop through every other digit in list starting from first item
+        odd_sum += int(digit)  # add integer value of digit to odd_sum
 
+    # initialize variable for the sum of even numbers
     even_sum = 0
-    for value in upc_list[1:11:2]:
-        even_sum += int(value)
+    for digit in upc_list[1:11:2]:  # loop through every other digit in list starting from second item
+        even_sum += int(digit)  # add integer value of digit to even_sum
 
+    # perform multiplication, addition, and modulo operations
     check_sum = (even_sum + (odd_sum * 3)) % 10
 
+    # condition operation if check_cum i
     if check_sum != 0:
         check_sum = 10 - check_sum
 
@@ -59,6 +61,3 @@ def checksum (upc):
         return True
     else:
         return False
-
-
-print(checksum('036000291452'))
