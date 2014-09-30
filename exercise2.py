@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
 
 """
-    Perform a checksum on a UPC
+    Perform a checksum on a UPC.
+
+    This module contains one function checksum. It can be passed a parameter
+    that is a string which must be 12 characters long. All
+    other inputs will result in an error.
 
     Assignment 1, Exercise 2, INF1340 Fall 2014
 """

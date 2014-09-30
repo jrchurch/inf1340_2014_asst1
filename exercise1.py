@@ -6,20 +6,14 @@ This module contains one function grade_to_gpa. It can be passed a parameter
 that is an integer (0-100) or a letter grade (A+, A, A-, B+, B, B-, or FZ). All
 other inputs will result in an error.
 
-Example:
-    $ python exercise1.py
-
 """
 
 __author__ = 'Sam Novak and Jodie Church'
-__email__ = ""
 
 __copyright__ = "2014 Sam Novak and Jodie Church"
 __license__ = "MIT License"
 
 __status__ = "Prototype"
-
-# imports one per line
 
 
 def grade_to_gpa(grade):
