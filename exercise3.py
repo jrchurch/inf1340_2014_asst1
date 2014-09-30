@@ -9,12 +9,12 @@ def decide_rps(player1, player2):
 ("Scissors", "Paper")
 ("Paper", "Scissors")
 
-# rps_results = {}
-# rps_results[("Rock", "Paper")] = 2
-# rps_results["Paper", "Rock"] = 1
-# rps_results["Scissors", "Paper"] = 1
-# rps_results["Paper", "Scissors"] = 2
+rps_results = {}
+rps_results[("Rock", "Paper")] = 2
+rps_results["Paper", "Rock"] = 1
+rps_results["Scissors", "Paper"] = 1
+rps_results["Paper", "Scissors"] = 2
 
-# print(rps_results["Paper", "Rock"])
-# print(rps_results["Rock", "Paper"])
+print(rps_results["Paper", "Rock"])
+print(rps_results["Rock", "Paper"])
 
