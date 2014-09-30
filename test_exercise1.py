@@ -21,11 +21,11 @@ def test_letter_grade():
     """
     assert grade_to_gpa("A+") == 4.0
     assert grade_to_gpa("A") == 4.0
-    assert grade_to_gpa("A-") == 4.0
-    assert grade_to_gpa("B+") == 4.0
-    assert grade_to_gpa("B") == 4.0
-    assert grade_to_gpa("B-") == 4.0
-    assert grade_to_gpa("FZ") == 4.0
+    assert grade_to_gpa("A-") == 3.7
+    assert grade_to_gpa("B+") == 3.3
+    assert grade_to_gpa("B") == 3.0
+    assert grade_to_gpa("B-") == 2.7
+    assert grade_to_gpa("FZ") == 0.0
     
     with pytest.raises(ValueError):
         grade_to_gpa("q")
@@ -77,3 +77,6 @@ def test_float_input():
         grade_to_gpa(82.5)
 
 # add functions for any other tests
+test_float_input()
+test_letter_grade()
+test_percentage_grade()

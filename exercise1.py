@@ -40,27 +40,50 @@ def grade_to_gpa(grade):
         ValueError if parameter is out of range
     """
 
-    letter_grade = ""
-    gpa = 0.0
+    letter_grade_to_gpa = {
+        'A+': 4.0,
+        'A': 4.0,
+        'A-': 3.7,
+        'B+': 3.3,
+        'B': 3.0,
+        'B-': 2.7,
+        'FZ': 0.0
+    }
+
+    percent_grade_to_letter = {
+        (90, 100): 'A+',
+        (85, 89): 'A',
+        (80, 84): 'A-',
+        (77, 79): 'B+',
+        (73, 76): 'B',
+        (70, 72): 'B-',
+        (0, 69): 'FZ'
+    }
 
     if type(grade) is str:
-        print ("letter") # remove this line once the code is implemented
-        # check that the grade is one of the accepted values
-        # assign grade to letter_grade
+        # convert grade to uppercase
+        grade = grade.upper()
+        # check if inputted grade exists as key in the letter to grade dictionary
+        if grade in letter_grade_to_gpa:
+            # return the value of the key
+            return letter_grade_to_gpa[grade]
+        else:
+            # if letter grade is not in dictionary
+            raise ValueError("Accepted letter grades are: A+, A, A-, B+, B, B-, FZ")
     elif type(grade) is int:
-        print("mark") # remove this line once the code is implemented
-        # check that grade is in the accepted range
-        # convert the numeric grade to a letter grade
-        # assign the value to letter_grade
-        # hint: letter_grade = mark_to_letter(grade)
+        # check if inputted grade is within 1 - 100 inclusive
+        if grade in range(0, 101):
+            # loop through conversion dictionary
+            for percent_range, letter_grade in percent_grade_to_letter.items():
+                # check if grade is between hi/low in key
+                if grade in range(percent_range[0], percent_range[1]+1):
+                    # return the value of key that the grade falls within
+                    return letter_grade_to_gpa[letter_grade]
+        else:
+            # if integer input is not between 0 - 100
+            raise ValueError("Number grades must be in the range of 0 to 100")
+
     else:
-        # raise a TypeError exception
+        # if neither string nor integer is inputted raise a TypeError exception
         raise TypeError("Invalid type passed as parameter")
-
-    # write a long if-statement to convert letter_grade
-    # assign the value to gpa
-    if letter_grade == "A":
-        gpa = 4.0
-
-    return gpa
 
