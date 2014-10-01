@@ -62,4 +62,3 @@ def decide_rps(player1, player2):
     else:
         # raise TypeError if not string
         raise TypeError("Invalid type passed as parameter")
-
