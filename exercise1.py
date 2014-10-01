@@ -65,7 +65,7 @@ def grade_to_gpa(grade):
             # if letter grade is not in dictionary
             raise ValueError("Accepted letter grades are: A+, A, A-, B+, B, B-, FZ")
     elif type(grade) is int:
-        # check if inputted grade is within 1 - 100 inclusive
+        # check if inputted grade is within 0 - 100 inclusive
         if grade in range(0, 101):
             # loop through conversion dictionary
             for percent_range, letter_grade in percent_grade_to_letter.items():
