@@ -37,7 +37,7 @@ def decide_rps(player1, player2):
     """
     accepted_input = ["Rock", "Paper", "Scissors"]
 
-    game_rules = {
+    game_results = {
         ("Rock", "Paper"): 2,
         ("Rock", "Scissors"): 1,
         ("Paper", "Rock"): 1,
@@ -55,10 +55,10 @@ def decide_rps(player1, player2):
             # if parameters do not match
             else:
                 current_game = (player1, player2)  # create tuple with parameters
-                return game_rules[current_game]  # return value from the key that matches tuple for the current game
+                return game_results[current_game]  # return value from the key that matches tuple for the current game
         else:
             # raise ValueError either payer1 or player2 parameters are not in accepted values
-            raise ValueError("Accepted letter grades are: Rock, Paper, Scissors")
+            raise ValueError("Accepted Player Choices are: Rock, Paper, Scissors")
     else:
         # raise TypeError if not string
         raise TypeError("Invalid type passed as parameter")
