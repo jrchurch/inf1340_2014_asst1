@@ -26,7 +26,6 @@ def test_checksum():
     assert checksum("717951000841") is False
     # other tests
 
-
 def test_input():
     """
     Inputs that are the incorrect format and length
