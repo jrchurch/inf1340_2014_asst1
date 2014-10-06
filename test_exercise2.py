@@ -32,15 +32,13 @@ def test_input():
     Inputs that are the incorrect format and length
     """
     with pytest.raises(TypeError):
-        checksum(1.0)
-        checksum(786936224306)
+        checksum(1.0)  # Test float
+        checksum(786936224306)  # Test Integer
 
     with pytest.raises(ValueError):
-        checksum("1")
+        checksum("1")  # test length of input
         checksum("1234567890")
 
-    # other tests
 
-# add functions for any other tests
 test_checksum()
 test_input()
