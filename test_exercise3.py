@@ -25,3 +25,7 @@ def test_input():
     with pytest.raises(ValueError):
         decide_rps("Rocks", "Paper")
         decide_rps("Papers", "Scissors")
+
+
+test_rules()
+test_input()
