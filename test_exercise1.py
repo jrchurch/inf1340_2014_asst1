@@ -75,8 +75,3 @@ def test_float_input():
     """
     with pytest.raises(TypeError):
         grade_to_gpa(82.5)
-
-# add functions for any other tests
-test_float_input()
-test_letter_grade()
-test_percentage_grade()

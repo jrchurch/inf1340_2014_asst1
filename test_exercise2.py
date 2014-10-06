@@ -39,6 +39,3 @@ def test_input():
         checksum("1")  # test length of input
         checksum("1234567890")
 
-
-test_checksum()
-test_input()

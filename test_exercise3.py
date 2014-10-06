@@ -30,6 +30,3 @@ def test_input():
         decide_rps("Rocks", "Paper")
         decide_rps("Papers", "Scissors")
 
-
-test_rules()
-test_input()
