@@ -23,8 +23,11 @@ def test_input():
     Inputs that are the incorrect format and length
     """
     with pytest.raises(TypeError):
-        decide_rps(3, 4)
-        decide_rps(121)
+        decide_rps(3, 4)  # Test input is not integer
+        decide_rps(3.0, 4.0)  # Test input is not float
+
+    with pytest.raises(TypeError):
+        decide_rps(121)  # Case where only one parameter is passed. TypeError raised because player 2 is not assigned.
 
     with pytest.raises(ValueError):
         decide_rps("Rocks", "Paper")

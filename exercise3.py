@@ -63,4 +63,4 @@ def decide_rps(player1, player2):
             raise ValueError("Accepted Player Choices are: Rock, Paper, Scissors")
     else:
         # raise TypeError if not string
-        raise TypeError("Invalid type passed as parameter")
+        raise TypeError("Invalid type passed as parameter. Both parameters must be passed to function")
