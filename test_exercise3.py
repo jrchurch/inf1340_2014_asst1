@@ -11,6 +11,7 @@ def test_rules():
     assert decide_rps("Rock", "Paper") == 2
     assert decide_rps("Scissors", "Scissors") == 0
     assert decide_rps("Rock", "Scissors") == 1
+    assert decide_rps("rock", "scissors") == 1
 
 def test_input():
     """

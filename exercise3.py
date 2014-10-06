@@ -47,6 +47,8 @@ def decide_rps(player1, player2):
     }
     # check input type for both player1 and player2 input
     if type(player1) is str and type(player2) is str:
+        player1 = player1.capitalize()  # capitalize input
+        player2 = player2.capitalize()  # capitalize input
         # check to see if inputted strings match accepted input list
         if player1 in accepted_input and player2 in accepted_input:
             # if parameters are the same return 0, a tie.
