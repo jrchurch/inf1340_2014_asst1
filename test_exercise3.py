@@ -13,6 +13,7 @@ def test_rules():
     assert decide_rps("Rock", "Scissors") == 1
     assert decide_rps("rock", "scissors") == 1
 
+
 def test_input():
     """
     Inputs that are the incorrect format and length
