@@ -45,6 +45,7 @@ def decide_rps(player1, player2):
         ("Scissors", "Rock"): 2,
         ("Scissors", "Paper"): 1,
     }
+
     # check input type for both player1 and player2 input
     if type(player1) is str and type(player2) is str:
         player1 = player1.capitalize()  # capitalize input
