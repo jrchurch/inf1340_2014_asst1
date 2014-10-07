@@ -1,5 +1,14 @@
 #!/usr/bin/env python3
 
+""" Module to test exercise3.py """
+
+__author__ = "Sam Novak and Jodie Church"
+
+__copyright__ = "2014 Sam Novak and Jodie Church"
+__license__ = "MIT License"
+
+__status__ = "Prototype"
+
 import pytest
 from exercise3 import decide_rps
 
